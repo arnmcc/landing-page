@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass+Mono&display=swap');
+
+@font-face {
+    font-family: 'pp';
+    src: url('./pp.otf') format('opentype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    list-style: none;
+}
+
+body {
+    background-color: #FFFBDA;
+    color: #FFF8B9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+    font-family: "fort-xcondensed", sans-serif;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 25px;
+}
+
+.close {
+    color: #000000;
+    margin-bottom: 10dvh;
+    font-family: "Overpass Mono", serif;
+    text-decoration: none;
+    transition: all .3s ease;
+    padding: 5px;
+}
+
+.close:hover {
+    transform: scale(1.1);
+}
+
+.h1 {
+    padding-bottom: 5dvh;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-family: "fort-xcondensed", sans-serif;
+    font-weight: 700;
+    color: #FF2E00;
+    line-height: .8;
+    letter-spacing: -0.3vw;
+    font-size: clamp(2.8125rem, 1.4349rem + 4.898vw, 7.3125rem);
+    /* 45/117px */
+}
+
+.substack {
+    color: #000000;
+    padding-bottom: 6dvh;
+    font-family: "fort-xcondensed", sans-serif;
+    text-align: center;
+    letter-spacing: -0.1vw;
+    font-size: clamp(1.125rem, 0.8954rem + 0.8163vw, 1.875rem);
+}
+
+.credsMeltedBtn{
+    max-width: 225px;
+    width: 100%;
+    padding-top: 70px;
+     transition: all .3s ease;
+
+}
+.credsMeltedBtn:hover{
+     transform: scale(1.1);
+}
+
+
+@media(max-width: 700px) {
+.webdesign{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.credsMeltedBtn{
+    max-width: 150px;
+}
+
+}
+
+
+
+/* Stagger ------------------------------------------------ */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stagger {
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.stagger:nth-child(1) { animation-delay: 0.2s; }
+.stagger:nth-child(2) { animation-delay: 0.4s; }
+.stagger:nth-child(3) { animation-delay: 0.6s; }
+.stagger:nth-child(4) { animation-delay: 0.8s; }
