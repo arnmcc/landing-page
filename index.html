@@ -1,65 +1,337 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ARNMCC</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://use.typekit.net/djr4svw.css" />
 
-    <meta
-      property="al:ios:url"
-      content="instagram://user?username=arnmcc.xyz"
-    />
-    <meta property="al:ios:app_name" content="Instagram" />
-    <meta
-      property="al:android:url"
-      content="instagram://user?username=arnmcc.xyz"
-    />
-    <meta property="al:android:app_name" content="Instagram" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARNMCC</title>
+  <link rel="stylesheet" href="https://use.typekit.net/djr4svw.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Overpass+Mono&display=swap" />
 
-  <body>
-    <section class="main">
-      
-        <img class="aaronText" src="./images/aaron2.png" alt="Aaron text" />
+  <meta property="al:ios:url" content="instagram://user?username=arnmcc.xyz" />
+  <meta property="al:ios:app_name" content="Instagram" />
+  <meta property="al:android:url" content="instagram://user?username=arnmcc.xyz" />
+  <meta property="al:android:app_name" content="Instagram" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      list-style: none;
+      font-family: "fort-xcondensed", sans-serif;
+      font-style: normal;
+    }
+
+    body {
+      background-color: #FF5526;
+    }
+
+    .main {
+      width: 100%;
+      height: 100dvh;
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .aaronText {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Top nav ------------------------------------------------- */
+
+    .infoLink {
+      position: absolute;
+      top: clamp(1.25rem, 1rem + 1vw, 2.25rem);
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+
+      color: #000;
+      text-decoration: none;
+      font-family: "neue-haas-grotesk-display", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+      font-size: clamp(1rem, 0.85rem + 0.5vw, 1.375rem);
+      letter-spacing: 0.02em;
+    }
+
+    .infoLink:hover {
+      opacity: 0.7;
+    }
+
+    /* Book a call --------------------------------------------- */
+
+    .bookCallBtn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 3;
+
+      display: inline-block;
+      background-color: #fff8b9;
+      color: #000;
+      text-decoration: none;
+      font-family: "neue-haas-grotesk-display", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+      font-size: 30px;
+      letter-spacing: -0.6px;
+      padding: 0.50em 2em;
+      border-radius: 6px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      transition: transform 0.3s ease-in-out;
+      white-space: nowrap;
+    }
+
+    .bookCallBtn:hover {
+      transform: translate(-50%, -50%) scale(1.06);
+    }
+
+    /* Footer ---------------------------------------------------- */
+
+    .socialBtnSection {
+      position: absolute;
+      bottom: 13px;
+      width: 100%;
+      z-index: 3;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: clamp(1.5625rem, 1.2755rem + 1.0204vw, 2.5rem);
+      padding-right: clamp(1.5625rem, 1.2755rem + 1.0204vw, 2.5rem);
+    }
+
+    .socialBtnSectionLinks {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+    }
 
 
-      <a class="serviceBtnA" href="/melted.html">
-        <img
-          class="serviceBtn"
-          src="./images/services2.png"
-          alt="service button"
-        />
-      </a>
 
-      <a class="meltedBtnA" href="https://meltedthoughts.substack.com/"
-        ><img
-          class="meltedBtn"
-          src="./images/melted.png"
-          alt="waiting page button"
-      /></a>
+    .socialMediaBtnP {
+      color: #000;
+      font-size: clamp(0.875rem, 0.6122rem + 0.8503vw, 1.5rem);
+      text-decoration: none;
+      font-family: "Overpass Mono", serif;
+      border-bottom: 4px solid transparent;
+    }
 
-      <a download class="portfolioBtnA" href="./files/AM Portfolio 2025.pdf"
-        ><img
-          class="credsBtn"
-          src="./images/creds2025.png"
-          alt="credsBtn button"
-      /></a>
-    </section>
+    .socialMediaBtnPmobile {
+      color: #000;
+      font-size: clamp(0.875rem, 0.6122rem + 0.8503vw, 1.5rem);
+      text-decoration: none;
+      font-family: "Overpass Mono", serif;
+      border-bottom: 4px solid transparent;
+      display: none;
+    }
 
-    <section class="socialBtnSection">
-      <a class="socialMediaBtn" href="https://www.instagram.com/arnmcc.xyz"
-        >INSTAGRAM</a
-      >
-      <a
-        class="socialMediaBtn"
-        href="mailto:hello@arnmcc.xyz?subject=Project%20Kick-Off"
-        >MAIL</a
-      >
-      <a class="socialMediaBtn" href="https://www.linkedin.com/in/arnmcc"
-        >LINKEDIN</a
-      >
-    </section>
-  </body>
+    .socialMediaBtn {
+      color: #000;
+      font-size: clamp(0.875rem, 0.6122rem + 0.8503vw, 1.5rem);
+      text-decoration: none;
+      font-family: "Overpass Mono", serif;
+      border-bottom: 4px solid transparent;
+    }
+
+    .socialMediaBtn:hover {
+      border-bottom: 4px solid #000;
+    }
+
+    @media (max-width: 700px) {
+      .socialMediaBtn:hover {
+        border-bottom: 2px solid #000;
+      }
+
+      .socialMediaBtnPmobile {
+        color: #000;
+        font-size: clamp(0.875rem, 0.6122rem + 0.8503vw, 1.5rem);
+        text-decoration: none;
+        font-family: "Overpass Mono", serif;
+        border-bottom: 4px solid transparent;
+        display: block;
+      }
+
+      .socialMediaBtnP {
+        display: none;
+      }
+
+      .socialBtnSection {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: .5rem;
+      }
+
+      .socialBtnSectionLinks {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        width: 100%;
+        align-items: center;
+      }
+    }
+
+    /* Stagger ------------------------------------------------ */
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .stagger {
+      opacity: 0;
+      animation: fadeUp 0.6s ease forwards;
+    }
+
+    .stagger:hover {
+      transform: scale(1.1);
+    }
+
+    .stagger:nth-child(1) {
+      animation-delay: 0.2s;
+    }
+
+    .stagger:nth-child(2) {
+      animation-delay: 0.4s;
+    }
+
+    .stagger:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+
+    .stagger:nth-child(4) {
+      animation-delay: 0.8s;
+    }
+
+    /* Hero marquee ------------------------------------------- */
+    /* 10 images (./images/hero-01.jpg ... hero-10.jpg), centered
+         over the hero, sized off the viewport rather than fixed
+         px/rem values, scrolling continuously right to left. */
+
+    .heroMarqueeSection {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      z-index: 1;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .heroMarqueeTrack {
+      display: flex;
+      align-items: center;
+      gap: 2vw;
+      width: max-content;
+      animation: marqueeLTR 40s linear infinite;
+      will-change: transform;
+    }
+
+    .heroMarqueeTrack img {
+      height: 70dvh;
+      width: auto;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    /* Track is duplicated once in the markup, so shifting by -50%
+         of its own width creates a seamless, endless loop. Left to
+         right motion animates FROM the shifted position TO 0%. */
+    @keyframes marqueeLTR {
+      from {
+        transform: translateX(-50%);
+      }
+
+      to {
+        transform: translateX(0%);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .heroMarqueeTrack {
+        animation: none;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .heroMarqueeTrack img {
+        height: 70dvh;
+      }
+
+      .heroMarqueeTrack {
+        animation-duration: 50s;
+        gap: 4vw;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="main">
+    <img class="aaronText" src="./images/aaron2.png" alt="Aaron text" />
+
+    <a class="infoLink" href="/info.html">INFO</a>
+
+    <!-- Moving image strip: 10 hero images, centered, looping right to left -->
+    <div class="heroMarqueeSection">
+      <div class="heroMarqueeTrack">
+        <img src="./images/hero-01.jpg" alt="" />
+        <img src="./images/hero-02.jpg" alt="" />
+        <img src="./images/hero-03.jpg" alt="" />
+        <img src="./images/hero-04.jpg" alt="" />
+        <img src="./images/hero-05.jpg" alt="" />
+        <img src="./images/hero-06.jpg" alt="" />
+        <img src="./images/hero-07.jpg" alt="" />
+        <img src="./images/hero-08.jpg" alt="" />
+        <img src="./images/hero-09.jpg" alt="" />
+        <img src="./images/hero-10.jpg" alt="" />
+        <!-- duplicate set for a seamless loop -->
+        <img src="./images/hero-01.jpg" alt="" aria-hidden="true" />
+        <img src="./images/hero-02.jpg" alt="" aria-hidden="true" />
+        <img src="./images/hero-03.jpg" alt="" aria-hidden="true" />
+        <img src="./images/hero-04.jpg" alt="" aria-hidden="true" />
+        <img src="./images/hero-05.jpg" alt="" aria-hidden="true" />
+        <img src="./images/hero-06.jpg" alt="" aria-hidden="true" />
+        <img src="./images/hero-07.jpg" alt="" aria-hidden="true" />
+        <img src="./images/hero-08.jpg" alt="" aria-hidden="true" />
+        <img src="./images/hero-09.jpg" alt="" aria-hidden="true" />
+        <img src="./images/hero-10.jpg" alt="" aria-hidden="true" />
+      </div>
+    </div>
+
+    <a target="_blank" href="https://calendly.com/hello-arnmcc/30min" class="bookCallBtn" rel="noopener noreferrer">BOOK
+      A CALL</a>
+  </section>
+
+  <section class="socialBtnSection">
+
+    <p class="socialMediaBtnPmobile">STORY-LED BRAND BUILDING + DESIGN SPRINTS</p>
+    <div class="socialBtnSectionLinks">
+      <a class="socialMediaBtn" href="https://www.instagram.com/arnmcc.xyz">INSTAGRAM</a>
+      <p class="socialMediaBtnP">STORY-LED BRAND BUILDING + DESIGN SPRINTS</p>
+      <a class="socialMediaBtn" href="https://www.linkedin.com/in/arnmcc">LINKEDIN</a>
+    </div>
+  </section>
+
+
+</body>
+
 </html>
