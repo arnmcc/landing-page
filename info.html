@@ -29,21 +29,21 @@
       font-family: var(--display);
       color: var(--ink);
       width: 100%;
+      height: 100dvh;
+      overflow: hidden;
     }
 
     body {
-      min-height: 100vh;
       display: flex;
       flex-direction: column;
-      overflow-x: hidden;
     }
 
     main {
       flex: 1;
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
-      padding: clamp(1.5rem, 1vw + 1rem, 2.5rem) clamp(1.5rem, 2vw, 2.5rem) 0;
+      min-height: 0;
+      padding: clamp(1rem, 1vw + 0.5rem, 2rem) clamp(1.5rem, 2vw, 2.5rem) 0;
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -115,7 +115,7 @@
       text-transform: uppercase;
       background: var(--yellow);
       color: var(--ink);
-      font-size: 30px;
+      font-size: clamp(0.9375rem, 0.6505rem + 1.0204vw, 1.875rem);
       letter-spacing: -0.6px;
       padding: 0.50em 2em;
       border-radius: 6px;
@@ -147,8 +147,8 @@
 
     .card {
       background: var(--card-bg);
-      flex: 1 1 320px;
-      max-width: 400px;
+      flex: 1 1 300px;
+      max-width: 270px;
       padding: clamp(16px, 1.6vw, 24px) clamp(18px, 2vw, 26px);
       text-align: center;
     }
@@ -197,19 +197,21 @@
       text-decoration: none;
       font-family: "Overpass Mono", serif;
       border-bottom: 4px solid transparent;
+      width: 100%;
     }
+
 
     .socialMediaBtnPmobile {
       color: #000;
-      font-size: clamp(0.875rem, 0.6122rem + 0.8503vw, 1.5rem);
+      font-size: clamp(0.55rem, 0.55rem + 0.4vw, 0.85rem);
       text-decoration: none;
       font-family: "Overpass Mono", serif;
       border-bottom: 4px solid transparent;
       display: none;
+      text-align: center;
     }
 
     .socialMediaBtn {
-      flex: 1;
       color: #000;
       font-size: clamp(0.875rem, 0.6122rem + 0.8503vw, 1.5rem);
       text-decoration: none;
@@ -263,21 +265,33 @@
 
     @media (max-width: 600px) {
       main {
-        padding: 6vw 5vw 0;
+        padding: 4vw 5vw 0;
       }
 
       .headline {
-        font-size: 11vw;
+        font-size: 9.5vw;
+        line-height: 0.95;
+      }
+
+      .hero {
+        gap: clamp(16px, 2.5vh, 28px);
       }
 
       .cards {
-        flex-direction: column;
-        align-items: stretch;
+        gap: 10px;
       }
 
       .card {
-        flex: none;
-        max-width: none;
+        padding: 14px 16px;
+      }
+
+      .card p {
+        font-size: 12.5px;
+        line-height: 1.35;
+      }
+
+      .socialBtnSection {
+        padding: 0.75rem clamp(1.5625rem, 1.2755rem + 1.0204vw, 2.5rem);
       }
     }
   </style>

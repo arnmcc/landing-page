@@ -81,7 +81,7 @@
       font-family: "neue-haas-grotesk-display", sans-serif;
       font-weight: 700;
       font-style: normal;
-      font-size: 30px;
+      font-size: clamp(0.9375rem, 0.6505rem + 1.0204vw, 1.875rem);
       letter-spacing: -0.6px;
       padding: 0.50em 2em;
       border-radius: 6px;
@@ -129,11 +129,12 @@
 
     .socialMediaBtnPmobile {
       color: #000;
-      font-size: clamp(0.875rem, 0.6122rem + 0.8503vw, 1.5rem);
+      font-size: clamp(0.55rem, 0.55rem + 0.4vw, 0.85rem);
       text-decoration: none;
       font-family: "Overpass Mono", serif;
       border-bottom: 4px solid transparent;
       display: none;
+      text-align: center;
     }
 
     .socialMediaBtn {
@@ -155,7 +156,7 @@
 
       .socialMediaBtnPmobile {
         color: #000;
-        font-size: clamp(0.875rem, 0.6122rem + 0.8503vw, 1.5rem);
+        font-size: clamp(0.45rem, 0.55rem + 0.4vw, 0.85rem);
         text-decoration: none;
         font-family: "Overpass Mono", serif;
         border-bottom: 4px solid transparent;
@@ -257,11 +258,11 @@
          right motion animates FROM the shifted position TO 0%. */
     @keyframes marqueeLTR {
       from {
-        transform: translateX(-50%);
+        transform: translateX(0%);
       }
 
       to {
-        transform: translateX(0%);
+        transform: translateX(-50%);
       }
     }
 
